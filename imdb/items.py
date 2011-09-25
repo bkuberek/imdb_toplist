@@ -7,7 +7,7 @@ from scrapy.item import Item, Field
 
 class ImdbItem(Item):
     '''IMDB Movie Item'''
-    
+
     id = Field()
     url = Field()
     title = Field()
@@ -20,3 +20,8 @@ class ImdbItem(Item):
     image_large = Field()
     rating = Field()
     votes = Field()
+
+    # need this in order to enable the ImagePipelin
+    # this won't be persisted
+    image_urls = Field()
+    images = Field()

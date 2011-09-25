@@ -5,7 +5,7 @@ A Python spider built on [Scrapy](http://scrapy.org). It scrapes and stores a li
 
 ## Installation
 
-Install Python, Scrapy and PyMySQL. 
+Install Python, Python headers and static libs (required to install PIL), Scrapy, PIL and PyMySQL.
 
 Create a database:
 
@@ -36,7 +36,7 @@ Create a database:
     CREATE USER 'imdb'@'localhost' IDENTIFIED BY 'imdb123';
     GRANT ALL PRIVILEGES ON `imdb_toplist`.* TO 'imdb'@'localhost';
     FLUSH PRIVILEGES
-    
+
 Clone the project:
 
     git clone git://github.com/bkuberek/imdb_toplist.git
@@ -45,4 +45,4 @@ Run it:
 
     cd imdb_toplist
     scrapy crawl imdb_toplist
-    
+
